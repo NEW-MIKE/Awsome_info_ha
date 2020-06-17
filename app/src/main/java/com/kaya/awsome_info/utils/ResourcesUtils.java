@@ -1,4 +1,4 @@
-package com.kaelli.awsome_info.utils;
+package com.kaya.awsome_info.utils;
 
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
@@ -7,7 +7,7 @@ import android.support.annotation.StringRes;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.kaelli.awsome_info.App;
+import com.kaya.awsome_info.App;
 
 import java.text.MessageFormat;
 

@@ -1,4 +1,4 @@
-package com.kaelli.awsome_info.tree;
+package com.kaya.awsome_info.tree;
 
 import java.util.List;
 

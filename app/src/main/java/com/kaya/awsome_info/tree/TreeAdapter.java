@@ -1,4 +1,4 @@
-package com.kaelli.awsome_info.tree;
+package com.kaya.awsome_info.tree;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.kaelli.awsome_info.R;
-import com.kaelli.awsome_info.WebActivity;
-import com.kaelli.awsome_info.utils.ScreenUtils;
+import com.kaya.awsome_info.R;
+import com.kaya.awsome_info.WebActivity;
+import com.kaya.awsome_info.utils.ScreenUtils;
 
 import java.util.LinkedList;
 import java.util.List;

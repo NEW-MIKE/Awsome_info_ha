@@ -1,4 +1,4 @@
-package com.kaelli.awsome_info;
+package com.kaya.awsome_info;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.kaelli.awsome_info.tree.TreeAdapter;
-import com.kaelli.awsome_info.tree.TreeItem;
+import com.kaya.awsome_info.tree.TreeAdapter;
+import com.kaya.awsome_info.tree.TreeItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         item_2_6.title = "tool";
         item_2_6.uri = "https://tool.lu/nav/";
         TreeItem item_2_60 = new TreeItem();
-        item_2_60.title = "好奇心日报";
+        item_2_60.title = "好奇心日咳咳咳报";
         item_2_60.uri = "http://www.qdaily.com";
         TreeItem item_2_61 = new TreeItem();
         item_2_61.title = "某柠檬";
@@ -123,15 +123,20 @@ public class MainActivity extends AppCompatActivity {
         TreeItem item_2_64 = new TreeItem();
         item_2_64.title = "gitnavi-andi";
         item_2_64.uri = "http://www.gitnavi.com/u/AndyDufresne";
+        TreeItem item_2_65 = new TreeItem();
+        item_2_65.title = "download";
+        item_2_65.uri = "http://www.github.com/NEW-MIKE/";
         TreeItem item_2_7 = new TreeItem();
         item_2_7.title = "OSCHINA";
         item_2_7.uri = "https://www.oschina.net";
         item_0_1.child.add(item_2_5);
         item_0_1.child.add(item_2_6);
+        item_0_1.child.add(item_2_60);
         item_0_1.child.add(item_2_61);
         item_0_1.child.add(item_2_62);
         item_0_1.child.add(item_2_63);
         item_0_1.child.add(item_2_64);
+        item_0_1.child.add(item_2_65);
         item_0_1.child.add(item_2_7);
         item_0_1.child.add(item_1_2);
 

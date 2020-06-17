@@ -1,4 +1,4 @@
-package com.kaelli.awsome_info.utils;
+package com.kaya.awsome_info.utils;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -6,7 +6,7 @@ import android.graphics.Point;
 import android.view.Display;
 import android.view.WindowManager;
 
-import com.kaelli.awsome_info.App;
+import com.kaya.awsome_info.App;
 
 /**
  * Created by KaelLi on 2018/11/26.

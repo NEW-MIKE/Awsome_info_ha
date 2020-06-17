@@ -1,4 +1,4 @@
-package com.kaelli.awsome_info;
+package com.kaya.awsome_info;
 
 import android.content.Intent;
 import android.os.Bundle;
