@@ -75,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
         TreeItem item_62_3 = new TreeItem();
         item_62_3.title = "人人都是产品经理";
         item_62_3.uri = "http://www.woshipm.com";
+        TreeItem item_72_3 = new TreeItem();
+        item_72_3.title = "产品①佰";
+        item_72_3.uri = "http://www.chanpin100.com";
 
 
         item_0_0.child.add(item_2_0);
@@ -88,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         item_0_0.child.add(item_42_3);
         item_0_0.child.add(item_52_3);
         item_0_0.child.add(item_62_3);
+        item_0_0.child.add(item_72_3);
         item_0_0.child.add(item_1_0);
 
         list.add(item_0_0);
