@@ -11,9 +11,7 @@ import com.kaya.awsome_info.App;
 
 import java.text.MessageFormat;
 
-/**
- * Created by KaelLi on 2018/11/26.
- */
+
 public class ResourcesUtils {
     /**
      * 获取Resources

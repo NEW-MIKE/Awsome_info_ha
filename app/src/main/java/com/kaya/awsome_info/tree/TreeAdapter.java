@@ -22,9 +22,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by KaelLi on 2018/11/26.
- */
+
 public class TreeAdapter extends RecyclerView.Adapter<TreeAdapter.ViewHolder> implements TreeStateChangeListener {
     private final static int ITEM_STATE_CLOSE = 0;
     private final static int ITEM_STATE_OPEN = 1;

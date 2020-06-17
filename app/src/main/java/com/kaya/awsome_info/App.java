@@ -2,9 +2,7 @@ package com.kaya.awsome_info;
 
 import android.app.Application;
 
-/**
- * Created by KaelLi on 2018/11/26.
- */
+
 public class App extends Application {
     private static App mApp;
     @Override

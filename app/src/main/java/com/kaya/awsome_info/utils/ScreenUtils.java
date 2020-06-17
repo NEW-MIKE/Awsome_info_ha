@@ -8,9 +8,7 @@ import android.view.WindowManager;
 
 import com.kaya.awsome_info.App;
 
-/**
- * Created by KaelLi on 2018/11/26.
- */
+
 public class ScreenUtils {
     /**
      * 判断当前设备是手机还是平板，代码来自 Google I/O App for Android

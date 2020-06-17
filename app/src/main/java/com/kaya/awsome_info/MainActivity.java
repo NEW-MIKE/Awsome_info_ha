@@ -12,9 +12,7 @@ import com.kaya.awsome_info.tree.TreeItem;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by KaelLi on 2018/11/22.
- */
+
 public class MainActivity extends AppCompatActivity {
     private RecyclerView rvTree;
 
