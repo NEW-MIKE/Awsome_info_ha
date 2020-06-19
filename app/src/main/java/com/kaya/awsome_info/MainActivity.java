@@ -1,11 +1,26 @@
 package com.kaya.awsome_info;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
+import com.kaya.awsome_info.service.SongService;
 import com.kaya.awsome_info.tree.TreeAdapter;
 import com.kaya.awsome_info.tree.TreeItem;
 
@@ -15,16 +30,57 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView rvTree;
+    private DrawerLayout mDrawerLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
+        }
         rvTree = findViewById(R.id.rvTree);
         TreeAdapter treeAdapter = new TreeAdapter(this, initList());
         rvTree.setLayoutManager(new LinearLayoutManager(this));
         rvTree.setAdapter(treeAdapter);
+
+
+        Intent startIntent = new Intent(this, SongService.class);
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{ Manifest.permission. WRITE_EXTERNAL_STORAGE }, 1);
+        } else {
+            startService(startIntent); // 启动服务
+        }
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final FloatingActionButton fab1 = (FloatingActionButton) findViewById(R.id.fab1);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(fab1.getVisibility() == View.VISIBLE)
+                {
+                    fab1.setVisibility(View.INVISIBLE);
+                }
+                else
+                {
+                    fab1.setVisibility(View.VISIBLE);
+                }
+    /*            Snackbar.make(view, "Data deleted", Snackbar.LENGTH_SHORT)
+                        .setAction("Undo", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Toast.makeText(MainActivity.this, "Data restored", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .show();*/
+            }
+        });
     }
 
 
@@ -165,5 +221,16 @@ public class MainActivity extends AppCompatActivity {
         list.add(item_0_1);
 
         return list;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                break;
+            default:
+        }
+        return true;
     }
 }

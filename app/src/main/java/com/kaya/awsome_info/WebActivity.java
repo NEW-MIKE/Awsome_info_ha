@@ -1,11 +1,13 @@
 package com.kaya.awsome_info;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -13,12 +15,13 @@ import android.widget.Toast;
 
 
 public class WebActivity extends AppCompatActivity {
+    private WebView web;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
-        WebView web=(WebView) findViewById(R.id.web);
+        web=(WebView) findViewById(R.id.web);
         Intent intent = getIntent();
         String data = intent.getStringExtra("extar_data");
         Toast.makeText(this,data, Toast.LENGTH_LONG).show();
@@ -33,5 +36,20 @@ public class WebActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode,KeyEvent event)
+    {
+        if((keyCode == KeyEvent.KEYCODE_BACK) && (web.canGoBack()))
+        {
+            web.goBack();
+            return true;
+        }
+        finish();
+        Intent intent1 = new Intent(WebActivity.this,MainActivity.class);
+        startActivity(intent1);
+        return super.onKeyDown(keyCode,event);
+    }
+
 
 }
