@@ -3,20 +3,16 @@ package com.kaya.awsome_info.service;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.os.Environment;
 import android.os.IBinder;
-import android.support.v4.content.ContextCompat;
 
 import com.kaya.awsome_info.R;
 
-import java.io.File;
-
 import static java.lang.Boolean.TRUE;
 
-public class SongService extends Service {
+public class TwoSongService extends Service {
 
     private MediaPlayer mediaPlayer ;
-    public SongService() {
+    public TwoSongService() {
     }
 
     @Override
@@ -47,7 +43,7 @@ public class SongService extends Service {
 
     private void initMediaPlayer() {
         try {
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.weiwei);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.loop);
             mediaPlayer.prepare(); // 让MediaPlayer进入到准备状态
         } catch (Exception e) {
             e.printStackTrace();

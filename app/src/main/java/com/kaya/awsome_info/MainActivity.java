@@ -21,6 +21,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.kaya.awsome_info.service.SongService;
+import com.kaya.awsome_info.service.TwoSongService;
 import com.kaya.awsome_info.tree.TreeAdapter;
 import com.kaya.awsome_info.tree.TreeItem;
 
@@ -32,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView rvTree;
     private DrawerLayout mDrawerLayout;
     private static int flag;
+    private static int song;
     Intent startIntent ;
+    Intent startIntentTwo ;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         flag =0;
+        song=0;
+        startIntent = new Intent(MainActivity.this, SongService.class);
+        startIntentTwo = new  Intent(MainActivity.this, TwoSongService.class);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -72,16 +78,24 @@ public class MainActivity extends AppCompatActivity {
                 {
                    // fab1.setVisibility(View.VISIBLE);
                 }
-
-                startIntent = new Intent(MainActivity.this, SongService.class);
                 if(flag == 0) {
-                    startService(startIntent); // 启动服务
+                    if(song==0)
+                    {
+                        startService(startIntent); // 启动服务
+                        song =1;
+                    }
+                    else
+                    {
+                        startService(startIntentTwo);
+                        song =0;
+                    }
                     flag = 1;
                 }
                 else
                 {
                     flag =0;
                     stopService(startIntent);
+                    stopService(startIntentTwo);
                 }
 
             /*    Snackbar.make(view, "Data deleted", Snackbar.LENGTH_SHORT)
@@ -180,10 +194,10 @@ public class MainActivity extends AppCompatActivity {
         item_2_6.title = "      tool";
         item_2_6.uri = "https://tool.lu/nav/";
         TreeItem item_2_60 = new TreeItem();
-        item_2_60.title = "    xx好奇心日咳咳咳报";
+        item_2_60.title = "      好奇心日咳咳咳报";
         item_2_60.uri = "http://www.qdaily.com";
         TreeItem item_2_61 = new TreeItem();
-        item_2_61.title = "    xx某柠檬";
+        item_2_61.title = "      某柠檬";
         item_2_61.uri = "https://www.moulem.com";
         TreeItem item_2_62 = new TreeItem();
         item_2_62.title = "     gitnavi";

@@ -94,6 +94,8 @@ public class TreeAdapter extends RecyclerView.Adapter<TreeAdapter.ViewHolder> im
                    // Toast.makeText(mContext,treeItem.title,Toast.LENGTH_SHORT).show();
                     Intent intent1 = new Intent(mContext,WebActivity.class);
                     intent1.putExtra("extar_data",treeItem.uri);
+
+                    //Toast.makeText(mContext,"准备好输出总结了吗，有输出才会有成长喔",Toast.LENGTH_LONG).show();
                     mContext.startActivity(intent1);
                 }
                 else

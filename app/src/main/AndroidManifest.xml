@@ -15,9 +15,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <service
-            android:name=".service.SongService"
+            android:name=".service.TwoSongService"
             android:enabled="true"
             android:exported="true"></service>
+        <service
+            android:name=".service.SongService"
+            android:enabled="true"
+            android:exported="true" />
         <service
             android:name=".service.BackSongService"
             android:exported="false" />
