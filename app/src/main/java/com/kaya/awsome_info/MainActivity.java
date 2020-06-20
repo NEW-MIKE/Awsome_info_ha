@@ -31,15 +31,15 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private RecyclerView rvTree;
     private DrawerLayout mDrawerLayout;
-
+    private static int flag;
+    Intent startIntent ;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        flag =0;
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -52,12 +52,13 @@ public class MainActivity extends AppCompatActivity {
         rvTree.setAdapter(treeAdapter);
 
 
-        Intent startIntent = new Intent(this, SongService.class);
-        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+    /*    if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{ Manifest.permission. WRITE_EXTERNAL_STORAGE }, 1);
         } else {
-            startService(startIntent); // 启动服务
-        }
+
+        }*/
+       // startIntent = new Intent(MainActivity.this, SongService.class);
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         final FloatingActionButton fab1 = (FloatingActionButton) findViewById(R.id.fab1);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -69,9 +70,21 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    fab1.setVisibility(View.VISIBLE);
+                   // fab1.setVisibility(View.VISIBLE);
                 }
-    /*            Snackbar.make(view, "Data deleted", Snackbar.LENGTH_SHORT)
+
+                startIntent = new Intent(MainActivity.this, SongService.class);
+                if(flag == 0) {
+                    startService(startIntent); // 启动服务
+                    flag = 1;
+                }
+                else
+                {
+                    flag =0;
+                    stopService(startIntent);
+                }
+
+            /*    Snackbar.make(view, "Data deleted", Snackbar.LENGTH_SHORT)
                         .setAction("Undo", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -93,44 +106,44 @@ public class MainActivity extends AppCompatActivity {
 
         TreeItem item_1_0 = new TreeItem();
 
-        item_1_0.title = "三茅HR";
+        item_1_0.title = "      三茅HR";
         item_1_0.uri = "https://www.hrloo.com/rz";
        // item_1_0.child = new ArrayList<>();
         TreeItem item_2_0 = new TreeItem();
-        item_2_0.title = "HR沙龙";
+        item_2_0.title = "      HR沙龙";
         item_2_0.uri = "http://www.hrsalonchina.com";
         TreeItem item_2_1 = new TreeItem();
-        item_2_1.title = "HR GO";
+        item_2_1.title = "      HR GO";
         item_2_1.uri = "http://www.hrgo.cn/article/index";
         TreeItem item_2_2 = new TreeItem();
-        item_2_2.title = "商业新知";
+        item_2_2.title = "      商业新知";
         item_2_2.uri = "https://acc.shangyexinzhi.com";
         TreeItem item_2_3 = new TreeItem();
-        item_2_3.title = "36KR";
+        item_2_3.title = "      36KR";
         item_2_3.uri = "https://36kr.com";
         TreeItem item_02_3 = new TreeItem();
-        item_02_3.title = "HROOT";
+        item_02_3.title = "     HROOT";
         item_02_3.uri = "http://mobile.hroot.com";
         TreeItem item_12_3 = new TreeItem();
-        item_12_3.title = "中国人力资源网";
+        item_12_3.title = "     中国人力资源网";
         item_12_3.uri = "http://www.hr.com.cn";
         TreeItem item_22_3 = new TreeItem();
-        item_22_3.title = "中国人力资源开发网";
+        item_22_3.title = "     中国人力资源开发网";
         item_22_3.uri = "http://m.chinahrd.net";
         TreeItem item_32_3 = new TreeItem();
-        item_32_3.title = "MOOC中国";
+        item_32_3.title = "     MOOC中国";
         item_32_3.uri = "https://www.mooc.cn";
         TreeItem item_42_3 = new TreeItem();
-        item_42_3.title = "中国大学MOOC";
+        item_42_3.title = "     中国大学MOOC";
         item_42_3.uri = "https://www.icourse163.org/course/1201ZNUFE022-1002536016?utm_campaign=share&utm_medium=androidShare&utm_source=#/info";
         TreeItem item_52_3 = new TreeItem();
-        item_52_3.title = "世界经理人";
+        item_52_3.title = "     世界经理人";
         item_52_3.uri = "http://m.ceconlinebbs.com";
         TreeItem item_62_3 = new TreeItem();
-        item_62_3.title = "人人都是产品经理";
+        item_62_3.title = "     人人都是产品经理";
         item_62_3.uri = "http://www.woshipm.com";
         TreeItem item_72_3 = new TreeItem();
-        item_72_3.title = "产品①佰";
+        item_72_3.title = "     产品①佰";
         item_72_3.uri = "http://www.chanpin100.com";
 
 
@@ -157,36 +170,45 @@ public class MainActivity extends AppCompatActivity {
 
         TreeItem item_1_2 = new TreeItem();
         item_1_2.uri = "https://www.wanandroid.com/";
-        item_1_2.title = "玩安卓";
+        item_1_2.title = "      玩安卓";
        // item_1_2.child = new ArrayList<>();
         TreeItem item_2_5 = new TreeItem();
-        item_2_5.title = "IT 之家";
+        item_2_5.title = "      IT 之家";
         item_2_5.uri = "https://www.ithome.com";
 
         TreeItem item_2_6 = new TreeItem();
-        item_2_6.title = "tool";
+        item_2_6.title = "      tool";
         item_2_6.uri = "https://tool.lu/nav/";
         TreeItem item_2_60 = new TreeItem();
-        item_2_60.title = "好奇心日咳咳咳报";
+        item_2_60.title = "    xx好奇心日咳咳咳报";
         item_2_60.uri = "http://www.qdaily.com";
         TreeItem item_2_61 = new TreeItem();
-        item_2_61.title = "某柠檬";
+        item_2_61.title = "    xx某柠檬";
         item_2_61.uri = "https://www.moulem.com";
         TreeItem item_2_62 = new TreeItem();
-        item_2_62.title = "gitnavi";
+        item_2_62.title = "     gitnavi";
         item_2_62.uri = "http://www.gitnavi.com";
         TreeItem item_2_63 = new TreeItem();
-        item_2_63.title = "gitnavi——hanzhy";
+        item_2_63.title = "     gitnavi——hanzhy";
         item_2_63.uri = "http://www.gitnavi.com/u/hanzhy";
         TreeItem item_2_64 = new TreeItem();
-        item_2_64.title = "gitnavi-andi";
+        item_2_64.title = "     gitnavi-andi";
         item_2_64.uri = "http://www.gitnavi.com/u/AndyDufresne";
         TreeItem item_2_65 = new TreeItem();
-        item_2_65.title = "download";
+        item_2_65.title = "     download";
         item_2_65.uri = "http://www.github.com/NEW-MIKE/";
         TreeItem item_2_7 = new TreeItem();
-        item_2_7.title = "OSCHINA";
+        item_2_7.title = "      OSCHINA";
         item_2_7.uri = "https://www.oschina.net";
+        TreeItem item_2_70 = new TreeItem();
+        item_2_70.title = "     任意门";
+        item_2_70.uri = "https://gate.ofo.moe/";
+        TreeItem item_2_71 = new TreeItem();
+        item_2_71.title = "     rainymood";
+        item_2_71.uri = "https://rainymood.com/";
+        TreeItem item_2_72 = new TreeItem();
+        item_2_72.title = "     musictool";
+        item_2_72.uri = "http://www.musictool.top/";
         item_0_1.child.add(item_2_5);
         item_0_1.child.add(item_2_6);
         item_0_1.child.add(item_2_60);
@@ -196,6 +218,9 @@ public class MainActivity extends AppCompatActivity {
         item_0_1.child.add(item_2_64);
         item_0_1.child.add(item_2_65);
         item_0_1.child.add(item_2_7);
+        item_0_1.child.add(item_2_70);
+        item_0_1.child.add(item_2_71);
+        item_0_1.child.add(item_2_72);
         item_0_1.child.add(item_1_2);
 
         TreeItem item_1_3 = new TreeItem();

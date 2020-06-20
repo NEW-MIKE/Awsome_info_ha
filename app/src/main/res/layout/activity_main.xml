@@ -41,6 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="16dp"
+            android:visibility="visible" 
             android:src="@drawable/ic_done" />
 		<android.support.design.widget.FloatingActionButton
             android:id="@+id/fab1"
@@ -56,6 +57,7 @@
             android:id="@+id/rvTree"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+			android:background = "#FFFFCC"
             android:visibility="visible" 
 			android:layout_gravity="start"/>
 

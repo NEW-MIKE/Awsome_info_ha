@@ -7,11 +7,15 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.support.v4.content.ContextCompat;
 
+import com.kaya.awsome_info.R;
+
 import java.io.File;
+
+import static java.lang.Boolean.TRUE;
 
 public class SongService extends Service {
 
-    private MediaPlayer mediaPlayer = new MediaPlayer();
+    private MediaPlayer mediaPlayer ;
     public SongService() {
     }
 
@@ -31,18 +35,19 @@ public class SongService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         mediaPlayer.start();
+        mediaPlayer.setLooping(TRUE);
         return super.onStartCommand(intent, flags, startId);
     }
 
     @Override
     public void onDestroy() {
+        mediaPlayer.stop();
         super.onDestroy();
     }
 
     private void initMediaPlayer() {
         try {
-            File file = new File(Environment.getExternalStorageDirectory(), "music.mp3");
-            mediaPlayer.setDataSource(file.getPath()); // 指定音频文件的路径
+            mediaPlayer=MediaPlayer.create(getApplicationContext(), R.raw.weiwei);
             mediaPlayer.prepare(); // 让MediaPlayer进入到准备状态
         } catch (Exception e) {
             e.printStackTrace();

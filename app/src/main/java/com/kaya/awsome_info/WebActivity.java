@@ -40,14 +40,20 @@ public class WebActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode,KeyEvent event)
     {
+        if(web.canGoBack())
+        {
+            Toast.makeText(WebActivity.this,"can go back",Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(WebActivity.this,"can not go back",Toast.LENGTH_SHORT).show();
+        }
         if((keyCode == KeyEvent.KEYCODE_BACK) && (web.canGoBack()))
         {
             web.goBack();
             return true;
         }
         finish();
-        Intent intent1 = new Intent(WebActivity.this,MainActivity.class);
-        startActivity(intent1);
         return super.onKeyDown(keyCode,event);
     }
 
