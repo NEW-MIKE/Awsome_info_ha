@@ -428,8 +428,8 @@ public class MainActivity extends AppCompatActivity {
         item_6_08.title = "     公开大学课程";
         item_6_08.uri="http://www.open.ac.uk/";
         TreeItem item_6_09 = new TreeItem();
-        item_6_09.title = "     网易公开课";
-        item_6_09.uri="https://open.163.com/";
+        item_6_09.title = "     classcentral";
+        item_6_09.uri="https://www.classcentral.com/";
         TreeItem item_6_10 = new TreeItem();
         item_6_10.title = "     优达学城";
         item_6_10.uri="https://www.udacity.com/";
