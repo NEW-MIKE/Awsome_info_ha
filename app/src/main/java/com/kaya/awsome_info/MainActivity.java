@@ -350,11 +350,17 @@ public class MainActivity extends AppCompatActivity {
         TreeItem item_4_05 = new TreeItem();
         item_4_05.title = "     english stack";
         item_4_05.uri="https://english.stackexchange.com/";
+
+        TreeItem item_4_06 = new TreeItem();
+        item_4_06.title = "     英语写作训练平台";
+        item_4_06.uri="https://hemingwayapp.com/";
+
         item_4_0.child.add(item_4_01);
         item_4_0.child.add(item_4_02);
         item_4_0.child.add(item_4_03);
         item_4_0.child.add(item_4_04);
         item_4_0.child.add(item_4_05);
+        item_4_0.child.add(item_4_06);
 
         list.add(item_4_0);
 
@@ -387,6 +393,21 @@ public class MainActivity extends AppCompatActivity {
         TreeItem item_5_08 = new TreeItem();
         item_5_08.title = "     游戏化编程";
         item_5_08.uri="https://gamicon.us/";
+        TreeItem item_5_09 = new TreeItem();
+        item_5_09.title = "     异步社区";
+        item_5_09.uri="https://www.epubit.com";
+        TreeItem item_5_10 = new TreeItem();
+        item_5_10.title = "     Arxiv";
+        item_5_10.uri="https://arxiv.org";
+        TreeItem item_5_11 = new TreeItem();
+        item_5_11.title = "     gitxiv";
+        item_5_11.uri="http://www.gitxiv.com";
+        TreeItem item_5_12 = new TreeItem();
+        item_5_12.title = "     paperswithcode";
+        item_5_12.uri="https://paperswithcode.com";
+        TreeItem item_5_13 = new TreeItem();
+        item_5_13.title = "     reddit";
+        item_5_13.uri="https://www.redditinc.com";
         item_5_0.child.add(item_5_01);
         item_5_0.child.add(item_5_02);
         item_5_0.child.add(item_5_03);
@@ -395,6 +416,11 @@ public class MainActivity extends AppCompatActivity {
         item_5_0.child.add(item_5_06);
         item_5_0.child.add(item_5_07);
         item_5_0.child.add(item_5_08);
+        item_5_0.child.add(item_5_09);
+        item_5_0.child.add(item_5_10);
+        item_5_0.child.add(item_5_11);
+        item_5_0.child.add(item_5_12);
+        item_5_0.child.add(item_5_13);
 
         list.add(item_5_0);
 
@@ -501,7 +527,21 @@ public class MainActivity extends AppCompatActivity {
         TreeItem item_7_06 = new TreeItem();
         item_7_06.title = "     优设";
         item_7_06.uri="https://www.uisdc.com/";
-
+        TreeItem item_7_07 = new TreeItem();
+        item_7_07.title = "     阿萨姆软件";
+        item_7_07.uri="https://www.sssam.com/";
+        TreeItem item_7_08 = new TreeItem();
+        item_7_08.title = "     龙轩导航";
+        item_7_08.uri="http://ilxdh.com/";
+        TreeItem item_7_09 = new TreeItem();
+        item_7_09.title = "     有趣网址之家";
+        item_7_09.uri="https://youquhome.com/";
+        TreeItem item_7_10 = new TreeItem();
+        item_7_10.title = "     科塔学术导航";
+        item_7_10.uri="https://site.sciping.com/";
+        TreeItem item_7_11 = new TreeItem();
+        item_7_11.title = "     火狐移动联盟";
+        item_7_11.uri="https://www.huohu123.com/";
 
         item_7_0.child.add(item_7_01);
         item_7_0.child.add(item_7_02);
@@ -509,6 +549,11 @@ public class MainActivity extends AppCompatActivity {
         item_7_0.child.add(item_7_04);
         item_7_0.child.add(item_7_05);
         item_7_0.child.add(item_7_06);
+        item_7_0.child.add(item_7_07);
+        item_7_0.child.add(item_7_08);
+        item_7_0.child.add(item_7_09);
+        item_7_0.child.add(item_7_10);
+        item_7_0.child.add(item_7_11);
         list.add(item_7_0);
 
 
@@ -566,6 +611,24 @@ public class MainActivity extends AppCompatActivity {
         TreeItem item_8_16 = new TreeItem();
         item_8_16.title = "     repl";
         item_8_16.uri="https://repl.it/";
+        TreeItem item_8_17 = new TreeItem();
+        item_8_17.title = "     洛谷";
+        item_8_17.uri="https://www.luogu.com.cn/problem/list";
+        TreeItem item_8_18 = new TreeItem();
+        item_8_18.title = "     topcoder";
+        item_8_18.uri="https://www.topcoder.com/";
+        TreeItem item_8_19 = new TreeItem();
+        item_8_19.title = "     codeforces";
+        item_8_19.uri="https://codeforces.com/";
+        TreeItem item_8_20 = new TreeItem();
+        item_8_20.title = "     codewars";
+        item_8_20.uri="https://www.codewars.com/";
+        TreeItem item_8_21 = new TreeItem();
+        item_8_21.title = "     spoj";
+        item_8_21.uri="https://www.spoj.com/";
+        TreeItem item_8_22 = new TreeItem();
+        item_8_22.title = "     codingame";
+        item_8_22.uri="https://www.codingame.com/start";
 
 
         item_8_0.child.add(item_8_01);
@@ -584,6 +647,12 @@ public class MainActivity extends AppCompatActivity {
         item_8_0.child.add(item_8_14);
         item_8_0.child.add(item_8_15);
         item_8_0.child.add(item_8_16);
+        item_8_0.child.add(item_8_17);
+        item_8_0.child.add(item_8_18);
+        item_8_0.child.add(item_8_19);
+        item_8_0.child.add(item_8_20);
+        item_8_0.child.add(item_8_21);
+        item_8_0.child.add(item_8_22);
         list.add(item_8_0);
 
 
@@ -632,7 +701,9 @@ public class MainActivity extends AppCompatActivity {
         TreeItem item_9_13 = new TreeItem();
         item_9_13.title = "     搜宝名言 自我提升的句子";
         item_9_13.uri="https://www.sb580.com/juzi/10280.html";
-
+        TreeItem item_9_14 = new TreeItem();
+        item_9_14.title = "     知我心理学";
+        item_9_14.uri="  https://author.baidu.com/home?type=profile&action=profile&mthfr=box_share&context={%22from%22:%22dusite_sresults%22,%22uk%22:%22UFpxfw-iEFxmTczaSeW6og%22,%22tab%22:%22article%22}";
 
 
         item_9_0.child.add(item_9_01);
@@ -649,6 +720,7 @@ public class MainActivity extends AppCompatActivity {
         item_9_0.child.add(item_9_11);
         item_9_0.child.add(item_9_12);
         item_9_0.child.add(item_9_13);
+        item_9_0.child.add(item_9_14);
         list.add(item_9_0);
 
         TreeItem item_10_0 = new TreeItem();
@@ -780,6 +852,137 @@ public class MainActivity extends AppCompatActivity {
         item_10_0.child.add(item_10_29);
         item_10_0.child.add(item_10_30);
         list.add(item_10_0);
+
+
+
+        TreeItem item_11_0 = new TreeItem();
+        item_11_0.title = "解压场地";
+        item_11_0.child = new ArrayList<>();
+
+        TreeItem item_11_01 = new TreeItem();
+        item_11_01.title = "     WeaveSilk";
+        item_11_01.uri="http://weavesilk.com/";
+        TreeItem item_11_02 = new TreeItem();
+        item_11_02.title = "     猫的呼噜";
+        item_11_02.uri="https://purrli.com/";
+        TreeItem item_11_03 = new TreeItem();
+        item_11_03.title = "     舞动";
+        item_11_03.uri="http://www.staggeringbeauty.com/";
+        TreeItem item_11_04 = new TreeItem();
+        item_11_04.title = "     键盘魔术";
+        item_11_04.uri="http://magickeyboard.io/";
+        TreeItem item_11_05 = new TreeItem();
+        item_11_05.title = "     画线游戏";
+        item_11_05.uri="https://lines.frvr.com/";
+        TreeItem item_11_06 = new TreeItem();
+        item_11_06.title = "     假新闻游戏";
+        item_11_06.uri="https://www.getbadnews.com/#play";
+        TreeItem item_11_07 = new TreeItem();
+        item_11_07.title = "     人性游戏，信任的进化";
+        item_11_07.uri="https://dccxi.com/trust/";
+        TreeItem item_11_08 = new TreeItem();
+        item_11_08.title = "     治愈表情";
+        item_11_08.uri="https://happyhappyhardcore.com/";
+        TreeItem item_11_09 = new TreeItem();
+        item_11_09.title = "     键盘魔术";
+        item_11_09.uri="http://magickeyboard.io/";
+        TreeItem item_11_10 = new TreeItem();
+        item_11_10.title = "     画线游戏";
+        item_11_10.uri="https://lines.frvr.com/";
+
+        item_11_0.child.add(item_11_01);
+        item_11_0.child.add(item_11_02);
+        item_11_0.child.add(item_11_03);
+        item_11_0.child.add(item_11_04);
+        item_11_0.child.add(item_11_05);
+        item_11_0.child.add(item_11_06);
+        item_11_0.child.add(item_11_07);
+        item_11_0.child.add(item_11_08);
+        //item_11_0.child.add(item_11_09);
+        //item_11_0.child.add(item_11_10);
+        list.add(item_11_0);
+
+
+        TreeItem item_12_0 = new TreeItem();
+        item_12_0.title = "基于github的学习";
+        item_12_0.child = new ArrayList<>();
+
+        TreeItem item_12_01 = new TreeItem();
+        item_12_01.title = "     github中文排行榜";
+        item_12_01.uri="https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts/blob/master/README.md";
+        TreeItem item_12_02 = new TreeItem();
+        item_12_02.title = "     英语进阶指南";
+        item_12_02.uri="https://github.com/booklibrary16/English-level-up-tips-for-Chinese";
+        TreeItem item_12_03 = new TreeItem();
+        item_12_03.title = "     行业报告合集";
+        item_12_03.uri="https://github.com/booklibrary16/report_gather";
+        TreeItem item_12_04 = new TreeItem();
+        item_12_04.title = "     独立中文博客";
+        item_12_04.uri="https://github.com/booklibrary16/awesome-blogCN-feeds";
+        TreeItem item_12_05 = new TreeItem();
+        item_12_05.title = "     互联网面试笔记";
+        item_12_05.uri="https://github.com/booklibrary16/note-of-interview";
+        TreeItem item_12_06 = new TreeItem();
+        item_12_06.title = "     职场生存指南";
+        item_12_06.uri="https://github.com/booklibrary16/corporate-strategic";
+
+        TreeItem item_12_07 = new TreeItem();
+        item_12_07.title = "     JOB地图";
+        item_12_07.uri="https://github.com/booklibrary16/Jobs";
+        TreeItem item_12_08 = new TreeItem();
+        item_12_08.title = "     前端面试";
+        item_12_08.uri="https://github.com/booklibrary16/web-interview";
+        TreeItem item_12_09 = new TreeItem();
+        item_12_09.title = "     猎头麦";
+        item_12_09.uri="https://github.com/lietoumai";
+        TreeItem item_12_10 = new TreeItem();
+        item_12_10.title = "     软件测试";
+        item_12_10.uri="https://github.com/wangding/testing";
+        TreeItem item_12_11 = new TreeItem();
+        item_12_11.title = "     测试进阶";
+        item_12_11.uri="https://github.com/Brucepk/Testing";
+        TreeItem item_12_12 = new TreeItem();
+        item_12_12.title = "     AndroidAll";
+        item_12_12.uri="https://github.com/NEW-MIKE/AndroidAll";
+        TreeItem item_12_13 = new TreeItem();
+        item_12_13.title = "     Android图谱";
+        item_12_13.uri="https://github.com/NEW-MIKE/AndroidKnowledgeSystem";
+
+
+
+
+
+        item_12_0.child.add(item_12_01);
+        item_12_0.child.add(item_12_02);
+        item_12_0.child.add(item_12_03);
+        item_12_0.child.add(item_12_04);
+        item_12_0.child.add(item_12_05);
+        item_12_0.child.add(item_12_06);
+        item_12_0.child.add(item_12_07);
+        item_12_0.child.add(item_12_08);
+        item_12_0.child.add(item_12_09);
+        item_12_0.child.add(item_12_10);
+        item_12_0.child.add(item_12_11);
+        item_12_0.child.add(item_12_12);
+        item_12_0.child.add(item_12_13);
+        list.add(item_12_0);
+
+
+        TreeItem item_13_0 = new TreeItem();
+        item_13_0.title = "实力文章收集";
+        item_13_0.child = new ArrayList<>();
+
+        TreeItem item_13_01 = new TreeItem();
+        item_13_01.title = "     灵魂之力";
+        item_13_01.uri="https://juejin.im/post/5eb168e9f265da7bb65fb27a";
+        TreeItem item_13_02 = new TreeItem();
+        item_13_02.title = "     网络世界，如何提问";
+        item_13_02.uri="https://github.com/booklibrary16/How-To-Ask-Questions-The-Smart-Way";
+
+
+        item_13_0.child.add(item_13_01);
+        item_13_0.child.add(item_13_02);
+        list.add(item_13_0);
 
         return list;
     }
